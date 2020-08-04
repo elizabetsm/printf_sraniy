@@ -141,7 +141,7 @@ int		ft_printf(char *format, ...)
 	t_struct	*st;
 	int			i;
 
-	st = (t_struct *)malloc(sizeof(t_struct));
+	st = (t_struct *)ft_memalloc(sizeof(t_struct));
 	va_start(ap, format);
 	st->color = ft_memalloc(20);
 	st->i = 0;
@@ -163,25 +163,25 @@ int		ft_printf(char *format, ...)
 	return (i);
 }
 
-int main()
-{
-	static unsigned int		mx_u = 235;
-	static long double			mx_Lf = 0.375l;
-	static double				mx_f = 0.625;
-	static long				mx_li =  4223372036854775800;
-	static long long			mx_lli = 3223372036654775200;
-	static char				mx_c = 'G';
-	static short				mx_hi = -3244;
-	static char				mx_hhi = 'F';
-	static char			   *mx_s = "Hello, World!";
-	static int					mx_i = 42;
-	double z;
-	z = NAN;
-//	z = -1 * z;
-	int i = ft_printf("{Blue}%d{eoc}", 123);
-	printf("\ni = %d\n", i);
-	int a = printf("{Blue}%d{eoc}", 123);
-    printf("\na = %d", a);
-
-    return 0;
-}
+//int main()
+//{
+//	static unsigned int		mx_u = 235;
+//	static long double			mx_Lf = 0.375l;
+//	static double				mx_f = 0.625;
+//	static long				mx_li =  4223372036854775800;
+//	static long long			mx_lli = 3223372036654775200;
+//	static char				mx_c = 'G';
+//	static short				mx_hi = -3244;
+//	static char				mx_hhi = 'F';
+//	static char			   *mx_s = "Hello, World!";
+//	static int					mx_i = 42;
+//	double z;
+//	z = NAN;
+////	z = -1 * z;
+//	int i = ft_printf("{Blue}%d{eoc}", 123);
+//	printf("\ni = %d\n", i);
+//	int a = printf("{Blue}%d{eoc}", 123);
+//    printf("\na = %d", a);
+//
+//    return 0;
+//}

@@ -8,8 +8,83 @@ int main()
 	int i;
 
 	a = 'a';
-	ft_printf("%Lf\n", 0.0);
-	printf("%Lf\n", 0.0);
+
+
+	char *c = "123456789";
+	char *str = " |%*.*s| \n";
+	int n = ft_printf(str,-2, 1, c);
+	int j =    printf(str,-2, 1, c);
+
+
+	if ( n == j)
+		printf("равны\n");
+	else
+		printf("не равны\n");
+
+//	char *c = "123456789";
+//	char *str = " |%+*.*s| \n";
+//	int n = ft_printf(str,10,0, c);
+//	int j =    printf(str,10, 0, c);
+
+//	char *c = "123456789";
+//	char *str = " |%0*.*s| \n";
+//	int n = ft_printf(str,10,0, c);
+//	int j =    printf(str,10, 0, c);
+
+//	char *c = NULL;
+//	char *str = " |%.s| \n";
+//	int n = ft_printf(str, c);
+//	int j =    printf(str, c);
+
+//	double c = NAN;
+//	char *str = "% 5lf\n";
+//	int n = ft_printf(str, c);
+//	int j =    printf(str, c);
+
+//	double c = NAN;
+//	char *str = "%+4.lf\n";
+//	int n = ft_printf(str, c);
+//	int j =    printf(str, c);
+
+//	float c = 0.125;
+//	char *str = "%20.2f\n";//leak
+//	int n = ft_printf(str, c);
+//	int j =    printf(str, c);
+
+//	int c = 4;
+//	char *str = "%20.14p\n";
+//	int n = ft_printf(str, &c);
+//	int j =    printf(str, &c);
+
+//	unsigned long c = 0xffffffffffffffff;
+//	char *str = "%#050.20llu\n";
+//	int n = ft_printf(str, c);
+//	int j =    printf(str, c);
+
+//	char c = 120;
+//	char *str = "%+010.5hho\n";
+//	int n = ft_printf(str, c);
+//	int j =    printf(str, c);
+
+//	char *str = "%#.o\n";
+//	int n = ft_printf(str, 0);
+//	int j =    printf(str, 0);
+
+//	char *str = "% 10.5u\n";
+//	int n = ft_printf(str, 0);
+//	int j =    printf(str, 0);
+
+//	char *str = "%0.d\n";
+//	int n = ft_printf(str, 0);
+//	int j =    printf(str, 0);
+
+
+
+
+
+
+//	ft_printf("%Lf\n", 0.0);
+//	printf("%Lf\n", 0.0);
 
 //	ft_printf("%c\n", 'g');
 //	printf("%c\n", 'g');
