@@ -21,7 +21,7 @@ int main()
 	else
 		printf("не равны\n");
 
-//	char *c = "123456789";
+//	char *c = "123456789";ok
 //	char *str = " |%+*.*s| \n";
 //	int n = ft_printf(str,10,0, c);
 //	int j =    printf(str,10, 0, c);

@@ -69,7 +69,7 @@ void	pres_num(t_struct *st)
 	int d;
 
 	d = st->wdth_pres - ft_strlen(st->tmp);
-	if ((st->wdth_pres > ft_strlen(st->tmp)))
+	if ((st->wdth_pres > ft_strlen(st->tmp)) && st->f_scp == 0)
 	{
 		while (d > 0)
 		{

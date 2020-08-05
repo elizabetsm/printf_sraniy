@@ -17,6 +17,12 @@ void	ft_print(char *format, t_struct *st)
 	st->i--;
 	if ((st->wdht > st->wdth_pres) && st->f_pres == 1 && st->f != 1)
 		st->f_trig = 1;
+	if (st->specif == 's' || st->specif == 'c' || st->specif == 'p')
+	{
+		st->f_scp = 1;
+		st->f_trig = 0;
+		st->f_space = 0;
+	}
 	if ((st->specif == 'x' || st->specif == 'X' ||
 		st->specif == 'o') && st->tmp[0] == '0')
 		st->without_0x = 1;
@@ -32,6 +38,8 @@ void	ft_print(char *format, t_struct *st)
 
 void	plus_print(t_struct *st)
 {
+	if (st->specif == 's' || st->specif == 'c' || st->specif == 'p')
+		st->f_plus = 0;
 	if (st->f == 1)
 	{
 		if (st->sign_bit == 1)
@@ -137,7 +145,7 @@ void	print_else(char *format, t_struct *st)
 		else if (st->specif == 'X')
 			st->schet = st->schet + re_putstr("0X");
 	}
-	if ((st->f_nul == 1 && st->f_pres != 1) || (st->f_nul == 1 && st->f == 1))
+	if ((st->f_nul == 1 && st->f_pres != 1) || (st->f_nul == 1 && st->f == 1) || (st->f_nul == 1 && st->f_scp == 1))
 		null_print(st);
 	if (st->wdth_pres > 0 && st->f_pres == 1)
 		pres_print(st);
@@ -146,6 +154,8 @@ void	print_else(char *format, t_struct *st)
 
 void	space_print1(t_struct *st, int c, int i)
 {
+	if (st->specif == 's' || st->specif == 'c' || st->specif == 'p')
+		st->f_plus = 0;
 	if ((st->num_flags == 1 && st->f_plus != 1) ||
 		(st->num_flags != 1 && st->f_plus == 1) || st->sign_bit == 1)
 		c--;
@@ -184,7 +194,7 @@ void	space_print(t_struct *st)
 		c = st->wdht - i;
 	else if (st->wdth_pres > 0 && i > st->wdth_pres && st->specif == 's')
 		c = st->wdht - st->wdth_pres;
-	else if (st->wdth_pres > 0 && (i < st->wdth_pres) && st->specif != 's')
+	else if (st->wdth_pres > 0 && (i < st->wdth_pres) && st->f_scp == 0)
 		c = st->wdht - st->wdth_pres;
 	else if (st->wdth_pres > 0 && (i > st->wdth_pres) && st->specif != 's')
 		c = st->wdht - i;
@@ -220,6 +230,8 @@ void	null_print1(t_struct *st, int i)
 		c = st->wdht - st->wdth_pres;
 	else
 		c = st->wdht - i;
+	if (st->wdth_pres > 0 && i > st->wdth_pres && st->f_scp == 1)
+		c = st->wdht - st->wdth_pres;
 	if ((st->num_flags == 1 && st->f_plus != 1) ||
 		(st->num_flags != 1 && st->f_plus == 1) || st->sign_bit == 1)
 		c--;
@@ -236,6 +248,8 @@ void	null_print(t_struct *st)
 	int i;
 
 	i = ft_strlen(st->tmp);
+	if (st->f_scp == 1 && st->wdth_pres == 0 && st->f_pres == 1)
+		i = 0;
 	if (st->f_space == 1 && st->num_flags != 1 && st->wdht == 0)
 		st->schet = st->schet + re_putchar(' ');
 	else

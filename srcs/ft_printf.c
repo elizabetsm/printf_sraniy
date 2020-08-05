@@ -68,6 +68,7 @@ void	ft_print_cs(int trig, t_struct *st, va_list ap)
 	else if (trig == 2)
 	{
 		st->c = va_arg(ap, int);
+		st->specif = 'c';
 		if (!st->c)
 		{
 			st->c_trig = 1;
@@ -163,25 +164,20 @@ int		ft_printf(char *format, ...)
 	return (i);
 }
 
-//int main()
-//{
-//	static unsigned int		mx_u = 235;
-//	static long double			mx_Lf = 0.375l;
-//	static double				mx_f = 0.625;
-//	static long				mx_li =  4223372036854775800;
-//	static long long			mx_lli = 3223372036654775200;
-//	static char				mx_c = 'G';
-//	static short				mx_hi = -3244;
-//	static char				mx_hhi = 'F';
-//	static char			   *mx_s = "Hello, World!";
-//	static int					mx_i = 42;
-//	double z;
-//	z = NAN;
-////	z = -1 * z;
-//	int i = ft_printf("{Blue}%d{eoc}", 123);
-//	printf("\ni = %d\n", i);
-//	int a = printf("{Blue}%d{eoc}", 123);
-//    printf("\na = %d", a);
-//
-//    return 0;
-//}
+int main()
+{
+	double z;
+	z = NAN;
+//	z = -1 * z;
+	char *c = 't';
+	char *str = " |% 010c| \n";
+	int n = ft_printf(str, c);
+	int j =    printf(str, c);
+
+	if ( n == j)
+		printf("равны\n");
+	else
+		printf("не равны\n");
+
+    return 0;
+}

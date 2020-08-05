@@ -65,6 +65,7 @@ void	init(t_struct *st)
 	st->str = NULL;
 	st->a = 0;
 	st->f = 0;
+	st->f_scp = 0;
 	st->f_plus = 0;
 	st->f_minus = 0;
 	st->f_space = 0;

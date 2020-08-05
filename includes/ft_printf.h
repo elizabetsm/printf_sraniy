@@ -46,6 +46,7 @@ typedef struct				s_struct{
 	int						f_pres;
 	int						f_long;
 	int						f_trig;
+	int 					f_scp;
 	int						without_0x;
 	int						wdht;
 	int						schet;
