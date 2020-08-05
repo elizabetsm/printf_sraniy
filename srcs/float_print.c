@@ -85,6 +85,10 @@ void	rounding(char *sp, t_struct *st)
 		zero_round(st);
 	if (st->round < i && sp[st->round] >= '5' && st->round > 0)
 	{
+//		if ((st->sp[st->round - 1] == '0' || st->sp[st->round - 1] == '2' ||
+//			st->sp[st->round - 1] == '4' || st->sp[st->round - 1] == '6' ||
+//			st->sp[st->round - 1] == '8') && sp[st->round] == '5')
+//			return ;
 		arr = ft_memalloc(st->round + 2);
 		arr[j] = '1';
 		while (j < st->round - 1)

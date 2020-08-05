@@ -164,20 +164,20 @@ int		ft_printf(char *format, ...)
 	return (i);
 }
 
-int main()
-{
-	double z;
-	z = NAN;
-//	z = -1 * z;
-	char *c = 't';
-	char *str = " |% 010c| \n";
-	int n = ft_printf(str, c);
-	int j =    printf(str, c);
-
-	if ( n == j)
-		printf("равны\n");
-	else
-		printf("не равны\n");
-
-    return 0;
-}
+//int main()
+//{
+//	double z;
+//	z = NAN;
+////	z = -1 * z;
+//	int c = 4;
+//	char *str = "%20.14p\n";
+//	int n = ft_printf(str, &c);
+//	int j =    printf(str, &c);
+//
+//	if ( n == j)
+//		printf("равны\n");
+//	else
+//		printf("не равны\n");
+//
+//    return 0;
+//}

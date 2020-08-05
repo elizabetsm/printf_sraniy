@@ -26,7 +26,7 @@ int main()
 //	int n = ft_printf(str,10,0, c);
 //	int j =    printf(str,10, 0, c);
 
-//	char *c = "123456789";
+//	char *c = "123456789";ok
 //	char *str = " |%0*.*s| \n";
 //	int n = ft_printf(str,10,0, c);
 //	int j =    printf(str,10, 0, c);
@@ -36,12 +36,12 @@ int main()
 //	int n = ft_printf(str, c);
 //	int j =    printf(str, c);
 
-//	double c = NAN;
+//	double c = NAN;ok
 //	char *str = "% 5lf\n";
 //	int n = ft_printf(str, c);
 //	int j =    printf(str, c);
 
-//	double c = NAN;
+//	double c = NAN;ok
 //	char *str = "%+4.lf\n";
 //	int n = ft_printf(str, c);
 //	int j =    printf(str, c);

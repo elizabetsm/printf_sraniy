@@ -321,6 +321,8 @@ int		check_inf_nan(t_sun eeei, t_struct *st)
 	{
 //		st->tmp = ft_memalloc(4);
 		st->tmp = ft_strjoin(st->tmp, "nan");
+		st->f_space = 0;
+		st->f_plus = 0;
 		return (1);
 	}
 	return (0);
@@ -485,7 +487,10 @@ void	bit_parcer(long double f, t_struct *st)
 		ft_memdel((void **)(&st->arr));
 	}
 	else
+	{
+		ft_memdel((void **)(&st->arr));
 		st->f_zero = 1;
+	}
 	after_point(eeei, st);
 	ft_out(st->fp, st->sp, st);
 }
