@@ -43,43 +43,40 @@ int main()
 //	int n = ft_printf(str, 0);
 //	int j =    printf(str, 0);
 
-
+//
 //	char *c = NULL;
 //	char *str = " |%.s| \n";
 //	int n = ft_printf(str, c);
 //	int j =    printf(str, c);
 
 
-	float c = 0.125;
-	char *str = "%20.2f\n";//leak
+	float c = 2.50;
+	char *str = "%20.f\n";//leak
 	int n = ft_printf(str, c);
 	int j =    printf(str, c);
+//
+//	printf("\nn = %d, j = %d\n\n", n, j);
 
-	printf("\nn = %d, j = %d\n\n", n, j);
 
-	if ( n == j)
-		printf("равны\n");
-	else
-		printf("не равны\n");
 
-//	char *c = "123456789";ok
+//	char *c = "123456789";
 //	char *str = " |%+*.*s| \n";
 //	int n = ft_printf(str,10,0, c);
 //	int j =    printf(str,10, 0, c);
 
-//	char *c = "123456789";ok
+//	char *c = "123456789";
 //	char *str = " |%0*.*s| \n";
 //	int n = ft_printf(str,10,0, c);
 //	int j =    printf(str,10, 0, c);
 
 
 
-//	double c = NAN;ok
+//	double c = NAN;
 //	char *str = "% 5lf\n";
 //	int n = ft_printf(str, c);
 //	int j =    printf(str, c);
 
-//	double c = NAN;ok
+//	double c = NAN;
 //	char *str = "%+4.lf\n";
 //	int n = ft_printf(str, c);
 //	int j =    printf(str, c);
@@ -91,7 +88,10 @@ int main()
 //	int n = ft_printf(str, &c);
 //	int j =    printf(str, &c);
 
-
+	if ( n == j)
+		printf("равны\n");
+	else
+		printf("не равны\n");
 
 
 

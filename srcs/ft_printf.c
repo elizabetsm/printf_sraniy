@@ -166,13 +166,10 @@ int		ft_printf(char *format, ...)
 
 //int main()
 //{
-//
-//
-//	char *str = "% 10.5u\n";
-//	int n = ft_printf(str, 0);
-//	int j =    printf(str, 0);
-//
-//	printf("%d, %d", n, j);
+//	double c = 0.1250;
+//	char *str = "%20.2f\n";//leak
+//	int n = ft_printf(str, c);
+//	int j =    printf(str, c);
 //
 //	if ( n == j)
 //		printf("равны\n");
