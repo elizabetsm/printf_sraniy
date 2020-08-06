@@ -89,4 +89,5 @@ add_executable(ft_printf
         srcs/pres.c
         srcs/print.c
         srcs/re_func.c
-        srcs/support.c)
+        srcs/support.c
+        srcs/width.c)

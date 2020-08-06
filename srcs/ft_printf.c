@@ -36,6 +36,23 @@ void	ft_printf_sec(char *format, t_struct *st, va_list ap)
 	}
 }
 
+void 	ft_print_cs1(t_struct *st, va_list ap)
+{
+	st->c = va_arg(ap, int);
+	st->specif = 'c';
+	if (!st->c)
+	{
+		st->c_trig = 1;
+		ft_strcpy(st->tmp, "s");
+	}
+	else
+	{
+		st->tmp[0] = st->c;
+		st->tmp[1] = '\0';
+	}
+	st->i++;
+}
+
 void	ft_print_cs(int trig, t_struct *st, va_list ap)
 {
 	if (trig == 1)
@@ -49,21 +66,7 @@ void	ft_print_cs(int trig, t_struct *st, va_list ap)
 		st->i++;
 	}
 	else if (trig == 2)
-	{
-		st->c = va_arg(ap, int);
-		st->specif = 'c';
-		if (!st->c)
-		{
-			st->c_trig = 1;
-			ft_strcpy(st->tmp, "s");
-		}
-		else
-		{
-			st->tmp[0] = st->c;
-			st->tmp[1] = '\0';
-		}
-		st->i++;
-	}
+		ft_print_cs1(st, ap);
 }
 
 void	specifier(char *format, t_struct *st, va_list ap)

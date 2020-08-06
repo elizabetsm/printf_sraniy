@@ -23,6 +23,21 @@ void	pres_check(char *format, t_struct *st, va_list ap)
 
 void	pres_width1(t_struct *st, char *wdht, char *format)
 {
+	int j;
+
+	j = 0;
+	while (format[st->i] != '\0' && format[st->i] != '%')
+	{
+		if (format[st->i] >= 48 && format[st->i] <= 57)
+		{
+			wdht[j] = format[st->i];
+			j++;
+		}
+		st->i++;
+		if (format[st->i] == '.' || (format[st->i] > 96 &&
+			format[st->i] < 123) || format[st->i] == st->specif)
+			break ;
+	}
 	st->wdth_pres = ft_atoi(wdht);
 	if (format[st->i - 1] >= 65 && format[st->i - 1] <= 122)
 		st->i--;
@@ -42,18 +57,18 @@ void	pres_width(char *format, t_struct *st, va_list ap)
 	else
 	{
 		wdht = ft_memalloc(20);
-		while (format[st->i] != '\0' && format[st->i] != '%')
-		{
-			if (format[st->i] >= 48 && format[st->i] <= 57)
-			{
-				wdht[j] = format[st->i];
-				j++;
-			}
-			st->i++;
-			if (format[st->i] == '.' || (format[st->i] > 96 &&
-			format[st->i] < 123) || format[st->i] == st->specif)
-				break ;
-		}
+//		while (format[st->i] != '\0' && format[st->i] != '%')
+//		{
+//			if (format[st->i] >= 48 && format[st->i] <= 57)
+//			{
+//				wdht[j] = format[st->i];
+//				j++;
+//			}
+//			st->i++;
+//			if (format[st->i] == '.' || (format[st->i] > 96 &&
+//			format[st->i] < 123) || format[st->i] == st->specif)
+//				break ;
+//		}
 		pres_width1(st, wdht, format);
 		free(wdht);
 	}

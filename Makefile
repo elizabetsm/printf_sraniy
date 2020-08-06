@@ -8,7 +8,7 @@ DIR_O = ./obj
 DIR_S = ./srcs
 DIR_H = ./includes
 
-LIBFT = ./libft
+LIBFT = libft
 
 
 INCS = -I $(DIR_H)
@@ -58,21 +58,16 @@ OBJS = srcs/ft_printf.o srcs/new.o srcs/flags.o \
        srcs/float_print.o srcs/hex.o srcs/floats2.o srcs/floats3.o \
        srcs/floats4.o srcs/floats5.o srcs/width.o  srcs/flags_print.o
 
-# SRCS = $(addprefix $(DIR_S)/,$(FILES))
-
-# OBJS = $(addprefix $(DIR_O)/,$(FILES:.c=.o))
-
 all: $(NAME) $(DIR_H)/ft_printf.h
 
 $(NAME): $(OBJS) $(DIR_H)/ft_printf.h
-	@make -C $(LIBFT)
+	@make -C $(LIBFT) re
 	@cp $(LIBFT)/libft.a ./$(NAME)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
-$(DIR_O)/%.o: $(DIR_S)/%.c $(DIR_H)/ft_printf.h
-	#@mkdir -p $(DIR_O)
-	@$(CC) -I $(DIR_H) -o $@ -c $<
+$(DIR_S)/%.o: $(DIR_S)/%.c $(DIR_H)/ft_printf.h
+	gcc -I $(DIR_H)/ft_printf.h -o $@ -c $<
 
 clean:
 	@rm -f $(OBJS)
