@@ -81,3 +81,50 @@ void	init(t_struct *st)
 	st->without_0x = 0;
 	st->f_trig = 0;
 }
+
+char *u_itoa(unsigned long long n)
+{
+	char			*a;
+	int				len;
+	unsigned long long int	tmp;
+
+	len = u_ft_length(n);
+	tmp = n;
+	if (n == (-9223372036854775807 - 1))
+		return (ft_strdup("-9223372036854775808"));
+	if (!(a = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	if (n == 0)
+		a[0] = '0';
+	if (n < 0)
+	{
+		a[0] = '-';
+		n = n * (-1);
+	}
+	a[len] = '\0';
+	while (n > 0)
+	{
+		len--;
+		a[len] = (n % 10) + '0';
+		n = n / 10;
+	}
+	return (a);
+}
+
+int		u_ft_length(unsigned long long int n)
+{
+	int	i;
+
+	i = 1;
+	if (n < 0)
+	{
+		n = n * (-1);
+		i++;
+	}
+	while ((n / 10) > 0)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
+}

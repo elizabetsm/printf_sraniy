@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/cseabass/ft_printf/includes -I/Users/cseabass/ft_printf/libft 
+C_INCLUDES = -I/Users/efleta/Desktop/printf_sraniy/includes -I/Users/efleta/Desktop/printf_sraniy/libft 
 

@@ -166,13 +166,13 @@ int		ft_printf(char *format, ...)
 
 //int main()
 //{
-//	double z;
-//	z = NAN;
-////	z = -1 * z;
-//	int c = 4;
-//	char *str = "%20.14p\n";
-//	int n = ft_printf(str, &c);
-//	int j =    printf(str, &c);
+//
+//
+//	char *str = "% 10.5u\n";
+//	int n = ft_printf(str, 0);
+//	int j =    printf(str, 0);
+//
+//	printf("%d, %d", n, j);
 //
 //	if ( n == j)
 //		printf("равны\n");

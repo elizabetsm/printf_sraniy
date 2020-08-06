@@ -128,5 +128,7 @@ void						rounding(char *sp, t_struct *st);
 void						ft_out(char *fp, char *sp, t_struct *st);
 void						sum_reverse(char *tmp, t_struct *st);
 void						rounding_fp(t_struct *st);
+char *u_itoa(unsigned long long n);
+int		u_ft_length(unsigned long long int n);
 
 #endif

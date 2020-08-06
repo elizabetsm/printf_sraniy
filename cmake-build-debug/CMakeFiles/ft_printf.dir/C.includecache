@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/cseabass/ft_printf/includes/ft_printf.h
+/Users/efleta/Desktop/printf_sraniy/includes/ft_printf.h
 stdio.h
 -
 stdarg.h
@@ -24,17 +24,13 @@ math.h
 limits.h
 -
 ../libft/libft.h
-/Users/cseabass/ft_printf/libft/libft.h
+/Users/efleta/Desktop/printf_sraniy/libft/libft.h
 
-/Users/cseabass/ft_printf/libft/libft.h
+/Users/efleta/Desktop/printf_sraniy/libft/libft.h
 string.h
 -
 
-/Users/cseabass/ft_printf/srcs/float_print.c
+/Users/efleta/Desktop/printf_sraniy/srcs/print.c
 ../includes/ft_printf.h
-/Users/cseabass/ft_printf/includes/ft_printf.h
-
-/Users/cseabass/ft_printf/srcs/ft_printf.c
-../includes/ft_printf.h
-/Users/cseabass/ft_printf/includes/ft_printf.h
+/Users/efleta/Desktop/printf_sraniy/includes/ft_printf.h
 

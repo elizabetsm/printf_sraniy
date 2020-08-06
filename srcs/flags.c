@@ -25,6 +25,9 @@ void	specif_di(t_struct *st, long long int a, char *format)
 	st->i++;
 }
 
+
+
+
 void	specif_uoxx1(t_struct *st, unsigned long long int a)
 {
 	st->specif = 'u';
@@ -33,7 +36,7 @@ void	specif_uoxx1(t_struct *st, unsigned long long int a)
 	else
 	{
 		ft_memdel((void **)(&st->tmp));
-		st->tmp = itoa(a);
+		st->tmp = u_itoa(a);
 	}
 	st->i++;
 }

@@ -17,7 +17,7 @@ void	ft_print(char *format, t_struct *st)
 	st->i--;
 	if ((st->wdht > st->wdth_pres) && st->f_pres == 1 && st->f != 1)
 		st->f_trig = 1;
-	if (st->specif == 's' || st->specif == 'c' || st->specif == 'p')
+	if (st->specif == 's' || st->specif == 'c' )
 	{
 		st->f_scp = 1;
 		st->f_trig = 0;
@@ -76,15 +76,15 @@ void	minus_print1(char *format, t_struct *st)
 		st->schet = st->schet + re_putstr(st->tmp);
 	else if ((st->specif != 's' && st->wdth_pres > 0) || st->f == 1)
 		st->schet = st->schet + re_putstr(st->tmp);
+	if (st->f_space == 1 && st->num_flags != 1 && st->sign_bit != 1 &&
+		st->c_trig != 1 && ft_strcmp(st->tmp, "%") != 0)
+		st->schet = st->schet + re_putchar(' ');
 	if ((st->wdht > 0 && st->f_nul != 1) || st->f_space == 1 || st->f_pres == 1)
 		space_print(st);
 }
 
 void	minus_print(char *format, t_struct *st)
 {
-	if (st->f_space == 1 && st->num_flags != 1 && st->sign_bit != 1 &&
-		st->c_trig != 1 && ft_strcmp(st->tmp, "%") != 0)
-		st->schet = st->schet + re_putchar(' ');
 	plus_print(st);
 	if (st->f_resh == 1)
 	{
@@ -105,8 +105,7 @@ void	minus_print(char *format, t_struct *st)
 
 void	print_else1(char *format, t_struct *st)
 {
-	if (st->specif == 'p')
-		st->schet = st->schet + re_putstr("0x");
+
 	if (st->f_resh == 1)
 	{
 		if (st->f_pres == 0 ||
@@ -132,7 +131,7 @@ void	print_else(char *format, t_struct *st)
 {
 	if (st->f_space == 1 && st->num_flags != 1 && st->sign_bit != 1 &&
 		st->c_trig != 1 && ft_strcmp(st->tmp, "%") != 0 &&
-		st->specif != 'u' && ft_strcmp(st->tmp, "nan") != 0)
+		ft_strcmp(st->tmp, "nan") != 0)
 		st->schet = st->schet + re_putchar(' ');
 	if (((st->wdht > 0 || st->f_space == 1) && (st->f_nul != 1 ||
 		(st->f_trig == 1))) || (st->f == 1 && st->f_nul != 1))
@@ -145,6 +144,8 @@ void	print_else(char *format, t_struct *st)
 		else if (st->specif == 'X')
 			st->schet = st->schet + re_putstr("0X");
 	}
+	if (st->specif == 'p')
+		st->schet = st->schet + re_putstr("0x");
 	if ((st->f_nul == 1 && st->f_pres != 1) || (st->f_nul == 1 && st->f == 1) || (st->f_nul == 1 && st->f_scp == 1))
 		null_print(st);
 	if (st->wdth_pres > 0 && st->f_pres == 1)

@@ -62,12 +62,15 @@ void	pres_width(char *format, t_struct *st, va_list ap)
 	char	*wdht;
 
 	j = 0;
-	wdht = ft_memalloc(20);
+
+	if ((format[st->i]> 59 && format[st->i] < 127) && st->zvezd == 0)
+		return ;
 	if (st->zvezd > 0 || (format[st->i - 2] == '*' &&
 		format[st->i - 1] != '%' && format[st->i - 1] != '.'))
 		st->wdth_pres = va_arg(ap, int);
 	else
 	{
+		wdht = ft_memalloc(20);
 		while (format[st->i] != '\0' && format[st->i] != '%')
 		{
 			if (format[st->i] >= 48 && format[st->i] <= 57)
@@ -81,8 +84,9 @@ void	pres_width(char *format, t_struct *st, va_list ap)
 				break ;
 		}
 		pres_width1(st, wdht, format);
+		free(wdht);
 	}
-	free(wdht);
+
 }
 
 void	width1(char *format, t_struct *st, va_list ap)

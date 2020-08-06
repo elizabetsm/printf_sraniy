@@ -28,6 +28,7 @@ int		length(char *format, t_struct *st, va_list ap)
 			st->a = (unsigned char)va_arg(ap, int);
 			specif_uoxx(st, format, st->a);
 		}
+		st->f_plus = 0;
 	}
 	else if (format[st->i] == 'h')
 		return (short_length(format, st, ap));
@@ -55,6 +56,7 @@ int		short_length(char *format, t_struct *st, va_list ap)
 	}
 	else
 		st->f_space = 0;
+	st->f_plus = 0;
 	return (1);
 }
 
