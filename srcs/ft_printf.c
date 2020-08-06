@@ -166,8 +166,8 @@ int		ft_printf(char *format, ...)
 
 //int main()
 //{
-//	double c = 0.1250;
-//	char *str = "%20.2f\n";//leak
+//	double c = 2.5;
+//	char *str = "%20.0f\n";//leak
 //	int n = ft_printf(str, c);
 //	int j =    printf(str, c);
 //

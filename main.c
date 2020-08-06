@@ -50,10 +50,7 @@ int main()
 //	int j =    printf(str, c);
 
 
-	float c = 2.50;
-	char *str = "%20.f\n";//leak
-	int n = ft_printf(str, c);
-	int j =    printf(str, c);
+
 //
 //	printf("\nn = %d, j = %d\n\n", n, j);
 
@@ -64,10 +61,10 @@ int main()
 //	int n = ft_printf(str,10,0, c);
 //	int j =    printf(str,10, 0, c);
 
-//	char *c = "123456789";
-//	char *str = " |%0*.*s| \n";
-//	int n = ft_printf(str,10,0, c);
-//	int j =    printf(str,10, 0, c);
+	char *c = "123456789";
+	char *str = " |%010.*s| \n";
+	int n = ft_printf(str, 0, c);
+	int j =    printf(str, 0, c);
 
 
 
@@ -87,6 +84,12 @@ int main()
 //	char *str = "%20.14p\n";
 //	int n = ft_printf(str, &c);
 //	int j =    printf(str, &c);
+
+
+//	double c = 0.999999500000000000;
+//	char *str = "% #20.3f\n";//leak
+//	int n = ft_printf(str, c);
+//	int j =    printf(str, c);
 
 	if ( n == j)
 		printf("равны\n");
