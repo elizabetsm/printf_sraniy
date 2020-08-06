@@ -25,9 +25,6 @@ void	specif_di(t_struct *st, long long int a, char *format)
 	st->i++;
 }
 
-
-
-
 void	specif_uoxx1(t_struct *st, unsigned long long int a)
 {
 	st->specif = 'u';
@@ -65,64 +62,6 @@ void	specif_uoxx(t_struct *st, char *format, unsigned long long int a)
 	}
 	else if (format[st->i] == 'u')
 		specif_uoxx1(st, a);
-}
-
-void	hexadecimal3(int i, t_struct *st)
-{
-	ft_memdel((void **)(&st->l));
-	st->l = itoa(i);
-}
-
-int		hexadecimal2(unsigned long long int a, int trig, t_struct *st)
-{
-	int i;
-	int f;
-
-	f = 0;
-	while (a > 0)
-	{
-		i = a % 16;
-		if (i > 9)
-		{
-			if (trig == 1)
-				st->l[0] = (i - 10) + 'A';
-			else
-				st->l[0] = (i - 10) + 'a';
-			st->l[1] = '\0';
-		}
-		else
-			hexadecimal3(i, st);
-		st->tmp = ft_strjoin(st->str, st->l);
-		ft_memdel((void **)(&st->str));
-		st->str = st->tmp;
-		a = a / 16;
-		f++;
-	}
-	return (f);
-}
-
-void	hexadecimal(unsigned long long int a, int trig, t_struct *st)
-{
-	int	f;
-
-	if (a == 0)
-	{
-		st->tmp[0] = '0';
-		st->nul = 1;
-		return ;
-	}
-	if (a < 0)
-		a *= -1;
-	ft_memdel((void **)(&st->tmp));
-	st->l = ft_memalloc(20);
-	f = hexadecimal2(a, trig, st);
-	ft_memdel((void **)(&st->l));
-	ft_memdel((void **)(&st->tmp));
-	st->tmp = ft_memalloc(400);
-	a = 0;
-	while (--f >= 0)
-		st->tmp[a++] = st->str[f];
-	st->tmp[a] = '\0';
 }
 
 int		octal1(unsigned long long int a, t_struct *st)

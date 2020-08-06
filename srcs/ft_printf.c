@@ -12,23 +12,6 @@
 
 #include "../includes/ft_printf.h"
 
-void	ft_printf_fl(char *format, t_struct *st, va_list ap)
-{
-	st->i--;
-	if (format[st->i] == 'L')
-		st->f_long = 2;
-	else
-		st->f_long = 0;
-	st->i++;
-	if (format[st->i] == 'f' && st->f_long == 0)
-		st->fl = va_arg(ap, double);
-	else if (format[st->i] == 'f' && st->f_long == 2)
-		st->fl = va_arg(ap, long double);
-	st->i++;
-	st->f = 1;
-	bit_parcer(st->fl, st);
-}
-
 void	ft_printf_sec(char *format, t_struct *st, va_list ap)
 {
 	if (format[st->i] == 'd' || format[st->i] == 'i')
@@ -129,13 +112,6 @@ void	handle(char *format, va_list ap, t_struct *st)
 		ft_print(format, st);
 }
 
-void 	memdel(t_struct *st)
-{
-	ft_memdel((void **)(&st->color));
-	ft_memdel((void **)(&st));
-
-}
-
 int		ft_printf(char *format, ...)
 {
 	va_list		ap;
@@ -163,18 +139,3 @@ int		ft_printf(char *format, ...)
 	memdel(st);
 	return (i);
 }
-
-//int main()
-//{
-//	double c = 2.5;
-//	char *str = "%20.0f\n";//leak
-//	int n = ft_printf(str, c);
-//	int j =    printf(str, c);
-//
-//	if ( n == j)
-//		printf("равны\n");
-//	else
-//		printf("не равны\n");
-//
-//    return 0;
-//}

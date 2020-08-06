@@ -62,7 +62,7 @@ int main()
 //	int j =    printf(str,10, 0, c);
 
 	char *c = "123456789";
-	char *str = " |%010.*s| \n";
+	char *str = " {Blue}|%010.*s| {eoc}asdfgh \n";
 	int n = ft_printf(str, 0, c);
 	int j =    printf(str, 0, c);
 

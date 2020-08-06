@@ -24,6 +24,7 @@ FILES = ft_printf.c \
         support.c \
         floats.c \
         float_print.c \
+        hex.c \
 
 FILES_MAIN = srcs/flags.c \
              srcs/ft_printf.c \
@@ -36,16 +37,26 @@ FILES_MAIN = srcs/flags.c \
              srcs/support.c \
              srcs/floats.c \
              srcs/float_print.c \
+             srcs/hex.c \
+             srcs/floats2.c \
+             srcs/floats3.c \
+             srcs/floats4.c \
+             srcs/floats5.c \
+             srcs/width.c \
+             srcs/flags_print.c
 
 SRCS = srcs/ft_printf.c srcs/new.c srcs/flags.c \
        srcs/re_func.c srcs/color_print.c srcs/print.c \
        srcs/pres.c srcs/length.c srcs/support.c srcs/floats.c \
        srcs/float_print.c \
+       srcs/hex.c srcs/floats2.c srcs/floats3.c srcs/floats4.c \
+       srcs/floats5.c srcs/width.c  srcs/flags_print.c
 
 OBJS = srcs/ft_printf.o srcs/new.o srcs/flags.o \
        srcs/re_func.o srcs/color_print.o srcs/print.o \
        srcs/pres.o srcs/length.o srcs/support.o srcs/floats.o \
-       srcs/float_print.o
+       srcs/float_print.o srcs/hex.o srcs/floats2.o srcs/floats3.o \
+       srcs/floats4.o srcs/floats5.o srcs/width.o  srcs/flags_print.o
 
 # SRCS = $(addprefix $(DIR_S)/,$(FILES))
 

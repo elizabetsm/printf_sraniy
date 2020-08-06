@@ -32,3 +32,39 @@ int	re_putchar(char c)
 	write(1, &c, 1);
 	return (1);
 }
+
+void	plus_print(t_struct *st)
+{
+	if (st->specif == 's' || st->specif == 'c' || st->specif == 'p')
+		st->f_plus = 0;
+	if (st->f == 1)
+	{
+		if (st->sign_bit == 1)
+			st->schet = st->schet + re_putchar('-');
+		else if (st->f_plus == 1 && ft_strcmp(st->tmp, "nan") != 0)
+			st->schet = st->schet + re_putchar('+');
+	}
+	else
+	{
+		if (st->num_flags == 1)
+			st->schet = st->schet + re_putchar('-');
+		else if (st->f_plus == 1)
+			st->schet = st->schet + re_putchar('+');
+	}
+}
+void	ft_printf_fl(char *format, t_struct *st, va_list ap)
+{
+	st->i--;
+	if (format[st->i] == 'L')
+		st->f_long = 2;
+	else
+		st->f_long = 0;
+	st->i++;
+	if (format[st->i] == 'f' && st->f_long == 0)
+		st->fl = va_arg(ap, double);
+	else if (format[st->i] == 'f' && st->f_long == 2)
+		st->fl = va_arg(ap, long double);
+	st->i++;
+	st->f = 1;
+	bit_parcer(st->fl, st);
+}

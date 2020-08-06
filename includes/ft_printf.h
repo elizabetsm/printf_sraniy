@@ -12,6 +12,8 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+#define SIZE_E 16383
+#define SIZE_M 64
 
 # include <stdio.h>
 # include <stdarg.h>
@@ -22,6 +24,7 @@
 # include <math.h>
 #include <limits.h>
 # include "../libft/libft.h"
+
 
 typedef struct				s_struct{
 

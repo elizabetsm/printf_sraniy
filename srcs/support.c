@@ -82,10 +82,10 @@ void	init(t_struct *st)
 	st->f_trig = 0;
 }
 
-char *u_itoa(unsigned long long n)
+char	*u_itoa(unsigned long long n)
 {
-	char			*a;
-	int				len;
+	char					*a;
+	int						len;
 	unsigned long long int	tmp;
 
 	len = u_ft_length(n);
