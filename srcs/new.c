@@ -88,11 +88,6 @@ void	detect_wdth(char *format, t_struct *st, va_list ap)
 		detect_wdth1(st, format);
 }
 
-void	ft_free(t_struct *st)
-{
-	ft_memdel((void **)(&st->tmp));
-}
-
 void 	memdel(t_struct *st)
 {
 	ft_memdel((void **)(&st->color));

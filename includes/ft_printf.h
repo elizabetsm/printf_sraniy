@@ -133,5 +133,32 @@ void						sum_reverse(char *tmp, t_struct *st);
 void						rounding_fp(t_struct *st);
 char *u_itoa(unsigned long long n);
 int		u_ft_length(unsigned long long int n);
+void	ft_printf_fl(char *format, t_struct *st, va_list ap);
+void	*ft_realloc(void *ptr, size_t size);
+void	*sum_char(char *ans, char *tmp, t_struct *st);
+void	*sum_char2(char *ans, int i, int j);
+void	*get_char(char *arr);
+void	*ft_cpy(char *newptr, char *ptr, int size);
+void 	init_array(t_struct *st);
+void	init_chars(t_struct *st);
+void	circle(t_struct *st, t_sun eeei);
+void	two_degree2(t_struct *st);
+void	two_degree(t_struct *st);
+void	rounding_fp(t_struct *st);
+int		sum_reverse2(const char *arr, t_struct *st);
+void	sum_reverse(char *tmp, t_struct *st);
+void	*get_zero(char *arr);
+void	*multiplication2(const char *ar, char *newptr);
+void	*multiplication(char *arr, int num, int deg);
+int		exp_shift(t_sun eeei);
+int		check_inf_nan(t_sun eeei, t_struct *st);
+int		check_zero1(t_sun eeei, t_struct *st);
+int		check_zero(t_sun eeei, t_struct *st);
+int		bits(t_sun eeei, int c);
+void	after_point(t_sun eeei, t_struct *st);
+void	plus_print(t_struct *st);
+void 	memdel(t_struct *st);
+
+
 
 #endif
