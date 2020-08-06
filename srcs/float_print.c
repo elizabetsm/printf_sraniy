@@ -28,16 +28,14 @@ void	ft_out1(t_struct *st, int i)
 	}
 }
 
-void	ft_out(char *fp, char *sp, t_struct *st)
+void	ft_out(char *sp, t_struct *st)
 {
 	int i;
 	int j;
-	int k;
 
 	if (st->round < 0)
 		st->round = 6;
 	rounding(sp, st);
-//	ft_memdel((void **)(&st->tmp));
 	st->tmp = ft_memalloc(ft_strlen(st->fp) + st->round + 2);
 	i = 0;
 	j = 0;
@@ -57,7 +55,7 @@ void	ft_out(char *fp, char *sp, t_struct *st)
 	ft_memdel((void **)(&st->sp));
 }
 
-int 	check_round(t_struct *st)
+int		check_round(t_struct *st)
 {
 	int j;
 

@@ -105,7 +105,6 @@ void	null_print1(t_struct *st, int i)
 
 void	null_print(t_struct *st)
 {
-	int c;
 	int i;
 
 	i = ft_strlen(st->tmp);

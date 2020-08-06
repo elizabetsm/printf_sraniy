@@ -66,7 +66,7 @@ void	*multiplication(char *arr, int num, int deg)
 		newptr = multiplication2(arr, newptr);
 		i++;
 	}
-	if (ft_strlen(newptr) < deg)
+	if (ft_strlen(newptr) < (size_t)deg)
 		newptr = get_zero(newptr);
 	ft_memdel((void **)(&arr));
 	return (newptr);

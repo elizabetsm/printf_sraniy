@@ -12,8 +12,8 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-#define SIZE_E 16383
-#define SIZE_M 64
+# define SIZE_E 16383
+# define SIZE_M 64
 
 # include <stdio.h>
 # include <stdarg.h>
@@ -22,9 +22,8 @@
 # include <stdlib.h>
 # include <float.h>
 # include <math.h>
-#include <limits.h>
+# include <limits.h>
 # include "../libft/libft.h"
-
 
 typedef struct				s_struct{
 
@@ -49,7 +48,7 @@ typedef struct				s_struct{
 	int						f_pres;
 	int						f_long;
 	int						f_trig;
-	int 					f_scp;
+	int						f_scp;
 	int						without_0x;
 	int						wdht;
 	int						schet;
@@ -92,13 +91,12 @@ void						check_flags(char *format, t_struct *st, va_list ap);
 void						chifr(char *format, t_struct *st, va_list ap);
 void						hexadecimal(unsigned long long int a, int trig,
 							t_struct *st);
-void						specif_di(t_struct *st, long long int a,
-							char *format);
+void						specif_di(t_struct *st);
 void						specif_uoxx(t_struct *st, char *format,
 							unsigned long long int a);
 int							length(char *format, t_struct *st, va_list ap);
-void						flags(char *format, t_struct *st, va_list ap);
-void						ft_print(char *format, t_struct *st);
+void						flags(char *format, t_struct *st);
+void						ft_print(t_struct *st);
 void						width(char *format, t_struct *st, va_list ap);
 void						null_print(t_struct *st);
 int							ft_length(long long int n);
@@ -114,8 +112,10 @@ void						color_print(t_struct *st);
 void						pres_check(char *format, t_struct *st, va_list ap);
 void						pres_width(char *format, t_struct *st, va_list ap);
 void						pres_print(t_struct *st);
-void						minus_print(char *format, t_struct *st);
-void						print_else(char *format, t_struct *st);
+void						minus_print(t_struct *st);
+void						minus_print1(t_struct *st);
+void						print_else(t_struct *st);
+void						print_else1(t_struct *st);
 int							short_length(char *format, t_struct *st,
 							va_list ap);
 int							long_length(char *format, t_struct *st, va_list ap);
@@ -128,37 +128,36 @@ void						pres_str(t_struct *st);
 void						pres_num(t_struct *st);
 void						bit_parcer(long double f, t_struct *st);
 void						rounding(char *sp, t_struct *st);
-void						ft_out(char *fp, char *sp, t_struct *st);
+void						ft_out(char *sp, t_struct *st);
 void						sum_reverse(char *tmp, t_struct *st);
 void						rounding_fp(t_struct *st);
-char *u_itoa(unsigned long long n);
-int		u_ft_length(unsigned long long int n);
-void	ft_printf_fl(char *format, t_struct *st, va_list ap);
-void	*ft_realloc(void *ptr, size_t size);
-void	*sum_char(char *ans, char *tmp, t_struct *st);
-void	*sum_char2(char *ans, int i, int j);
-void	*get_char(char *arr);
-void	*ft_cpy(char *newptr, char *ptr, int size);
-void 	init_array(t_struct *st);
-void	init_chars(t_struct *st);
-void	circle(t_struct *st, t_sun eeei);
-void	two_degree2(t_struct *st);
-void	two_degree(t_struct *st);
-void	rounding_fp(t_struct *st);
-int		sum_reverse2(const char *arr, t_struct *st);
-void	sum_reverse(char *tmp, t_struct *st);
-void	*get_zero(char *arr);
-void	*multiplication2(const char *ar, char *newptr);
-void	*multiplication(char *arr, int num, int deg);
-int		exp_shift(t_sun eeei);
-int		check_inf_nan(t_sun eeei, t_struct *st);
-int		check_zero1(t_sun eeei, t_struct *st);
-int		check_zero(t_sun eeei, t_struct *st);
-int		bits(t_sun eeei, int c);
-void	after_point(t_sun eeei, t_struct *st);
-void	plus_print(t_struct *st);
-void 	memdel(t_struct *st);
-
-
+char						*u_itoa(unsigned long long n);
+int							u_ft_length(unsigned long long int n);
+void						ft_printf_fl(char *format, t_struct *st,
+							va_list ap);
+void						*ft_realloc(void *ptr, size_t size);
+void						*sum_char(char *ans, char *tmp);
+void						*sum_char2(char *ans, int i, int j);
+void						*get_char(char *arr);
+void						*ft_cpy(char *newptr, char *ptr, int size);
+void						init_array(t_struct *st);
+void						init_chars(t_struct *st);
+void						circle(t_struct *st, t_sun eeei);
+void						two_degree2(t_struct *st);
+void						two_degree(t_struct *st);
+void						rounding_fp(t_struct *st);
+int							sum_reverse2(const char *arr, t_struct *st);
+void						sum_reverse(char *tmp, t_struct *st);
+void						*get_zero(char *arr);
+void						*multiplication2(const char *ar, char *newptr);
+void						*multiplication(char *arr, int num, int deg);
+int							exp_shift(t_sun eeei);
+int							check_inf_nan(t_sun eeei, t_struct *st);
+int							check_zero1(t_sun eeei, t_struct *st);
+int							check_zero(t_sun eeei, t_struct *st);
+int							bits(t_sun eeei, int c);
+void						after_point(t_sun eeei, t_struct *st);
+void						plus_print(t_struct *st);
+void						memdel(t_struct *st);
 
 #endif

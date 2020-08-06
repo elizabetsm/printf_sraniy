@@ -304,13 +304,31 @@
 		<Unit filename="/Users/cseabass/ft_printf/srcs/flags.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/cseabass/ft_printf/srcs/flags_print.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/cseabass/ft_printf/srcs/float_print.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/cseabass/ft_printf/srcs/floats.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/cseabass/ft_printf/srcs/floats2.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/cseabass/ft_printf/srcs/floats3.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/cseabass/ft_printf/srcs/floats4.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/cseabass/ft_printf/srcs/floats5.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/cseabass/ft_printf/srcs/ft_printf.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/cseabass/ft_printf/srcs/hex.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/cseabass/ft_printf/srcs/length.c">
@@ -329,6 +347,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/cseabass/ft_printf/srcs/support.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/cseabass/ft_printf/srcs/width.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/cseabass/ft_printf/CMakeLists.txt">

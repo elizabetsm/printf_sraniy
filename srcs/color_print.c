@@ -18,7 +18,6 @@ void	proverka(char *format, t_struct *st)
 
 	i = 0;
 	st->i++;
-//	st->color = ft_memalloc(20);
 	while (format[st->i] != '}')
 	{
 		st->color[i] = format[st->i++];

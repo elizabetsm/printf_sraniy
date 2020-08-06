@@ -66,7 +66,7 @@ void	rounding_fp(t_struct *st)
 	arr[0] = '1';
 	arr[1] = '\0';
 	st->fp = get_char(st->fp);
-	sum_char(st->fp, arr, st);
+	sum_char(st->fp, arr);
 	st->fp = get_char(st->fp);
 	st->f_zero = 0;
 	st->sp[0] -= 10;

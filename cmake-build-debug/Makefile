@@ -2067,6 +2067,33 @@ srcs/flags.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/flags.c.s
 .PHONY : srcs/flags.c.s
 
+srcs/flags_print.o: srcs/flags_print.c.o
+
+.PHONY : srcs/flags_print.o
+
+# target to build an object file
+srcs/flags_print.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/flags_print.c.o
+.PHONY : srcs/flags_print.c.o
+
+srcs/flags_print.i: srcs/flags_print.c.i
+
+.PHONY : srcs/flags_print.i
+
+# target to preprocess a source file
+srcs/flags_print.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/flags_print.c.i
+.PHONY : srcs/flags_print.c.i
+
+srcs/flags_print.s: srcs/flags_print.c.s
+
+.PHONY : srcs/flags_print.s
+
+# target to generate assembly for a file
+srcs/flags_print.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/flags_print.c.s
+.PHONY : srcs/flags_print.c.s
+
 srcs/float_print.o: srcs/float_print.c.o
 
 .PHONY : srcs/float_print.o
@@ -2121,6 +2148,114 @@ srcs/floats.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats.c.s
 .PHONY : srcs/floats.c.s
 
+srcs/floats2.o: srcs/floats2.c.o
+
+.PHONY : srcs/floats2.o
+
+# target to build an object file
+srcs/floats2.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats2.c.o
+.PHONY : srcs/floats2.c.o
+
+srcs/floats2.i: srcs/floats2.c.i
+
+.PHONY : srcs/floats2.i
+
+# target to preprocess a source file
+srcs/floats2.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats2.c.i
+.PHONY : srcs/floats2.c.i
+
+srcs/floats2.s: srcs/floats2.c.s
+
+.PHONY : srcs/floats2.s
+
+# target to generate assembly for a file
+srcs/floats2.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats2.c.s
+.PHONY : srcs/floats2.c.s
+
+srcs/floats3.o: srcs/floats3.c.o
+
+.PHONY : srcs/floats3.o
+
+# target to build an object file
+srcs/floats3.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats3.c.o
+.PHONY : srcs/floats3.c.o
+
+srcs/floats3.i: srcs/floats3.c.i
+
+.PHONY : srcs/floats3.i
+
+# target to preprocess a source file
+srcs/floats3.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats3.c.i
+.PHONY : srcs/floats3.c.i
+
+srcs/floats3.s: srcs/floats3.c.s
+
+.PHONY : srcs/floats3.s
+
+# target to generate assembly for a file
+srcs/floats3.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats3.c.s
+.PHONY : srcs/floats3.c.s
+
+srcs/floats4.o: srcs/floats4.c.o
+
+.PHONY : srcs/floats4.o
+
+# target to build an object file
+srcs/floats4.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats4.c.o
+.PHONY : srcs/floats4.c.o
+
+srcs/floats4.i: srcs/floats4.c.i
+
+.PHONY : srcs/floats4.i
+
+# target to preprocess a source file
+srcs/floats4.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats4.c.i
+.PHONY : srcs/floats4.c.i
+
+srcs/floats4.s: srcs/floats4.c.s
+
+.PHONY : srcs/floats4.s
+
+# target to generate assembly for a file
+srcs/floats4.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats4.c.s
+.PHONY : srcs/floats4.c.s
+
+srcs/floats5.o: srcs/floats5.c.o
+
+.PHONY : srcs/floats5.o
+
+# target to build an object file
+srcs/floats5.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats5.c.o
+.PHONY : srcs/floats5.c.o
+
+srcs/floats5.i: srcs/floats5.c.i
+
+.PHONY : srcs/floats5.i
+
+# target to preprocess a source file
+srcs/floats5.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats5.c.i
+.PHONY : srcs/floats5.c.i
+
+srcs/floats5.s: srcs/floats5.c.s
+
+.PHONY : srcs/floats5.s
+
+# target to generate assembly for a file
+srcs/floats5.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/floats5.c.s
+.PHONY : srcs/floats5.c.s
+
 srcs/ft_printf.o: srcs/ft_printf.c.o
 
 .PHONY : srcs/ft_printf.o
@@ -2147,6 +2282,33 @@ srcs/ft_printf.s: srcs/ft_printf.c.s
 srcs/ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_printf.c.s
 .PHONY : srcs/ft_printf.c.s
+
+srcs/hex.o: srcs/hex.c.o
+
+.PHONY : srcs/hex.o
+
+# target to build an object file
+srcs/hex.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/hex.c.o
+.PHONY : srcs/hex.c.o
+
+srcs/hex.i: srcs/hex.c.i
+
+.PHONY : srcs/hex.i
+
+# target to preprocess a source file
+srcs/hex.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/hex.c.i
+.PHONY : srcs/hex.c.i
+
+srcs/hex.s: srcs/hex.c.s
+
+.PHONY : srcs/hex.s
+
+# target to generate assembly for a file
+srcs/hex.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/hex.c.s
+.PHONY : srcs/hex.c.s
 
 srcs/length.o: srcs/length.c.o
 
@@ -2309,6 +2471,33 @@ srcs/support.s: srcs/support.c.s
 srcs/support.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/support.c.s
 .PHONY : srcs/support.c.s
+
+srcs/width.o: srcs/width.c.o
+
+.PHONY : srcs/width.o
+
+# target to build an object file
+srcs/width.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/width.c.o
+.PHONY : srcs/width.c.o
+
+srcs/width.i: srcs/width.c.i
+
+.PHONY : srcs/width.i
+
+# target to preprocess a source file
+srcs/width.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/width.c.i
+.PHONY : srcs/width.c.i
+
+srcs/width.s: srcs/width.c.s
+
+.PHONY : srcs/width.s
+
+# target to generate assembly for a file
+srcs/width.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/width.c.s
+.PHONY : srcs/width.c.s
 
 # Help Target
 help:
@@ -2535,15 +2724,33 @@ help:
 	@echo "... srcs/flags.o"
 	@echo "... srcs/flags.i"
 	@echo "... srcs/flags.s"
+	@echo "... srcs/flags_print.o"
+	@echo "... srcs/flags_print.i"
+	@echo "... srcs/flags_print.s"
 	@echo "... srcs/float_print.o"
 	@echo "... srcs/float_print.i"
 	@echo "... srcs/float_print.s"
 	@echo "... srcs/floats.o"
 	@echo "... srcs/floats.i"
 	@echo "... srcs/floats.s"
+	@echo "... srcs/floats2.o"
+	@echo "... srcs/floats2.i"
+	@echo "... srcs/floats2.s"
+	@echo "... srcs/floats3.o"
+	@echo "... srcs/floats3.i"
+	@echo "... srcs/floats3.s"
+	@echo "... srcs/floats4.o"
+	@echo "... srcs/floats4.i"
+	@echo "... srcs/floats4.s"
+	@echo "... srcs/floats5.o"
+	@echo "... srcs/floats5.i"
+	@echo "... srcs/floats5.s"
 	@echo "... srcs/ft_printf.o"
 	@echo "... srcs/ft_printf.i"
 	@echo "... srcs/ft_printf.s"
+	@echo "... srcs/hex.o"
+	@echo "... srcs/hex.i"
+	@echo "... srcs/hex.s"
 	@echo "... srcs/length.o"
 	@echo "... srcs/length.i"
 	@echo "... srcs/length.s"
@@ -2562,6 +2769,9 @@ help:
 	@echo "... srcs/support.o"
 	@echo "... srcs/support.i"
 	@echo "... srcs/support.s"
+	@echo "... srcs/width.o"
+	@echo "... srcs/width.i"
+	@echo "... srcs/width.s"
 .PHONY : help
 
 

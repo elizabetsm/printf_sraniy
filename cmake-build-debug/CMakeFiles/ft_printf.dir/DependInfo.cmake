@@ -76,15 +76,22 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/cseabass/ft_printf/libft/ft_toupper.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o"
   "/Users/cseabass/ft_printf/srcs/color_print.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/color_print.c.o"
   "/Users/cseabass/ft_printf/srcs/flags.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/flags.c.o"
+  "/Users/cseabass/ft_printf/srcs/flags_print.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/flags_print.c.o"
   "/Users/cseabass/ft_printf/srcs/float_print.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/float_print.c.o"
   "/Users/cseabass/ft_printf/srcs/floats.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/floats.c.o"
+  "/Users/cseabass/ft_printf/srcs/floats2.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/floats2.c.o"
+  "/Users/cseabass/ft_printf/srcs/floats3.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/floats3.c.o"
+  "/Users/cseabass/ft_printf/srcs/floats4.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/floats4.c.o"
+  "/Users/cseabass/ft_printf/srcs/floats5.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/floats5.c.o"
   "/Users/cseabass/ft_printf/srcs/ft_printf.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o"
+  "/Users/cseabass/ft_printf/srcs/hex.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/hex.c.o"
   "/Users/cseabass/ft_printf/srcs/length.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/length.c.o"
   "/Users/cseabass/ft_printf/srcs/new.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/new.c.o"
   "/Users/cseabass/ft_printf/srcs/pres.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/pres.c.o"
   "/Users/cseabass/ft_printf/srcs/print.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/print.c.o"
   "/Users/cseabass/ft_printf/srcs/re_func.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/re_func.c.o"
   "/Users/cseabass/ft_printf/srcs/support.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/support.c.o"
+  "/Users/cseabass/ft_printf/srcs/width.c" "/Users/cseabass/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/width.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

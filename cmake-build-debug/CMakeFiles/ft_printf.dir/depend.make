@@ -209,6 +209,10 @@ CMakeFiles/ft_printf.dir/srcs/flags.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/flags.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/flags.c.o: ../srcs/flags.c
 
+CMakeFiles/ft_printf.dir/srcs/flags_print.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/flags_print.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/flags_print.c.o: ../srcs/flags_print.c
+
 CMakeFiles/ft_printf.dir/srcs/float_print.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/float_print.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/float_print.c.o: ../srcs/float_print.c
@@ -217,9 +221,29 @@ CMakeFiles/ft_printf.dir/srcs/floats.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/floats.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/floats.c.o: ../srcs/floats.c
 
+CMakeFiles/ft_printf.dir/srcs/floats2.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/floats2.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/floats2.c.o: ../srcs/floats2.c
+
+CMakeFiles/ft_printf.dir/srcs/floats3.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/floats3.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/floats3.c.o: ../srcs/floats3.c
+
+CMakeFiles/ft_printf.dir/srcs/floats4.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/floats4.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/floats4.c.o: ../srcs/floats4.c
+
+CMakeFiles/ft_printf.dir/srcs/floats5.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/floats5.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/floats5.c.o: ../srcs/floats5.c
+
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../srcs/ft_printf.c
+
+CMakeFiles/ft_printf.dir/srcs/hex.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/hex.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/hex.c.o: ../srcs/hex.c
 
 CMakeFiles/ft_printf.dir/srcs/length.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/length.c.o: ../libft/libft.h
@@ -244,4 +268,8 @@ CMakeFiles/ft_printf.dir/srcs/re_func.c.o: ../srcs/re_func.c
 CMakeFiles/ft_printf.dir/srcs/support.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/support.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/srcs/support.c.o: ../srcs/support.c
+
+CMakeFiles/ft_printf.dir/srcs/width.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/width.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/srcs/width.c.o: ../srcs/width.c
 

@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-int	re_putstr(char const *s)
+int		re_putstr(char const *s)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	re_putstr(char const *s)
 	return (i);
 }
 
-int	re_putchar(char c)
+int		re_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
@@ -52,6 +52,7 @@ void	plus_print(t_struct *st)
 			st->schet = st->schet + re_putchar('+');
 	}
 }
+
 void	ft_printf_fl(char *format, t_struct *st, va_list ap)
 {
 	st->i--;
@@ -67,4 +68,28 @@ void	ft_printf_fl(char *format, t_struct *st, va_list ap)
 	st->i++;
 	st->f = 1;
 	bit_parcer(st->fl, st);
+}
+
+void	ft_printf_sec(char *format, t_struct *st, va_list ap)
+{
+	if (format[st->i] == 'd' || format[st->i] == 'i')
+	{
+		st->a = va_arg(ap, int);
+		st->specif = 'd';
+		specif_di(st);
+	}
+	else if (format[st->i] == 'o' || format[st->i] == 'u' ||
+		format[st->i] == 'x' || format[st->i] == 'X')
+	{
+		st->u = va_arg(ap, unsigned int);
+		specif_uoxx(st, format, st->u);
+		st->f_plus = 0;
+	}
+	else if (format[st->i] == 'p')
+	{
+		st->d = va_arg(ap, long long int);
+		hexadecimal(st->d, 0, st);
+		st->specif = 'p';
+		st->i++;
+	}
 }

@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void 	init_array(t_struct *st)
+void	init_array(t_struct *st)
 {
 	st->arr = ft_memalloc(2);
 	st->arr[0] = '1';
@@ -50,7 +50,7 @@ void	circle(t_struct *st, t_sun eeei)
 			{
 				b = bits(eeei, c);
 				if (b == 1 && c > 0)
-					st->fp = sum_char(st->fp, st->arr, st);
+					st->fp = sum_char(st->fp, st->arr);
 			}
 			else if (c < 0)
 				two_degree(st);
@@ -60,7 +60,7 @@ void	circle(t_struct *st, t_sun eeei)
 		b = bits(eeei, c);
 		two_degree(st);
 		if (b == 1)
-			st->fp = sum_char(st->fp, st->arr, st);
+			st->fp = sum_char(st->fp, st->arr);
 		c++;
 	}
 }
@@ -91,5 +91,5 @@ void	bit_parcer(long double f, t_struct *st)
 		st->f_zero = 1;
 	}
 	after_point(eeei, st);
-	ft_out(st->fp, st->sp, st);
+	ft_out(st->sp, st);
 }

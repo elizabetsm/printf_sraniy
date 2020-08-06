@@ -209,6 +209,10 @@ CMakeFiles/ft_printf.dir/srcs/flags.c.o
  /Users/cseabass/ft_printf/includes/ft_printf.h
  /Users/cseabass/ft_printf/libft/libft.h
  /Users/cseabass/ft_printf/srcs/flags.c
+CMakeFiles/ft_printf.dir/srcs/flags_print.c.o
+ /Users/cseabass/ft_printf/includes/ft_printf.h
+ /Users/cseabass/ft_printf/libft/libft.h
+ /Users/cseabass/ft_printf/srcs/flags_print.c
 CMakeFiles/ft_printf.dir/srcs/float_print.c.o
  /Users/cseabass/ft_printf/includes/ft_printf.h
  /Users/cseabass/ft_printf/libft/libft.h
@@ -217,10 +221,30 @@ CMakeFiles/ft_printf.dir/srcs/floats.c.o
  /Users/cseabass/ft_printf/includes/ft_printf.h
  /Users/cseabass/ft_printf/libft/libft.h
  /Users/cseabass/ft_printf/srcs/floats.c
+CMakeFiles/ft_printf.dir/srcs/floats2.c.o
+ /Users/cseabass/ft_printf/includes/ft_printf.h
+ /Users/cseabass/ft_printf/libft/libft.h
+ /Users/cseabass/ft_printf/srcs/floats2.c
+CMakeFiles/ft_printf.dir/srcs/floats3.c.o
+ /Users/cseabass/ft_printf/includes/ft_printf.h
+ /Users/cseabass/ft_printf/libft/libft.h
+ /Users/cseabass/ft_printf/srcs/floats3.c
+CMakeFiles/ft_printf.dir/srcs/floats4.c.o
+ /Users/cseabass/ft_printf/includes/ft_printf.h
+ /Users/cseabass/ft_printf/libft/libft.h
+ /Users/cseabass/ft_printf/srcs/floats4.c
+CMakeFiles/ft_printf.dir/srcs/floats5.c.o
+ /Users/cseabass/ft_printf/includes/ft_printf.h
+ /Users/cseabass/ft_printf/libft/libft.h
+ /Users/cseabass/ft_printf/srcs/floats5.c
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o
  /Users/cseabass/ft_printf/includes/ft_printf.h
  /Users/cseabass/ft_printf/libft/libft.h
  /Users/cseabass/ft_printf/srcs/ft_printf.c
+CMakeFiles/ft_printf.dir/srcs/hex.c.o
+ /Users/cseabass/ft_printf/includes/ft_printf.h
+ /Users/cseabass/ft_printf/libft/libft.h
+ /Users/cseabass/ft_printf/srcs/hex.c
 CMakeFiles/ft_printf.dir/srcs/length.c.o
  /Users/cseabass/ft_printf/includes/ft_printf.h
  /Users/cseabass/ft_printf/libft/libft.h
@@ -245,3 +269,7 @@ CMakeFiles/ft_printf.dir/srcs/support.c.o
  /Users/cseabass/ft_printf/includes/ft_printf.h
  /Users/cseabass/ft_printf/libft/libft.h
  /Users/cseabass/ft_printf/srcs/support.c
+CMakeFiles/ft_printf.dir/srcs/width.c.o
+ /Users/cseabass/ft_printf/includes/ft_printf.h
+ /Users/cseabass/ft_printf/libft/libft.h
+ /Users/cseabass/ft_printf/srcs/width.c

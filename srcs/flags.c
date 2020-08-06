@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void	specif_di(t_struct *st, long long int a, char *format)
+void	specif_di(t_struct *st)
 {
 	if (st->a < 0)
 	{
@@ -25,10 +25,10 @@ void	specif_di(t_struct *st, long long int a, char *format)
 	st->i++;
 }
 
-void	specif_uoxx1(t_struct *st, unsigned long long int a)
+void	specif_uoxx1(t_struct *st, unsigned long long a)
 {
 	st->specif = 'u';
-	if (a == (-9223372036854775807 - 1))
+	if (a == 9223372036854775808u)
 		ft_strcpy(st->tmp, "9223372036854775808");
 	else
 	{
@@ -87,11 +87,8 @@ int		octal1(unsigned long long int a, t_struct *st)
 
 void	octal(unsigned long long int a, t_struct *st)
 {
-	int		i;
 	int		f;
-	char	*hhh;
 
-	f = 0;
 	if (a == 0)
 	{
 		st->nul = 1;

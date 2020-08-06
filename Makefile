@@ -67,7 +67,7 @@ $(NAME): $(OBJS) $(DIR_H)/ft_printf.h
 	@ranlib $(NAME)
 
 $(DIR_S)/%.o: $(DIR_S)/%.c $(DIR_H)/ft_printf.h
-	gcc -I $(DIR_H)/ft_printf.h -o $@ -c $<
+	gcc $(FLAGS) -I $(DIR_H)/ft_printf.h -o $@ -c $<
 
 clean:
 	@rm -f $(OBJS)

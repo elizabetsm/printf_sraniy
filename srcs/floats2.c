@@ -104,7 +104,7 @@ void	*sum_char2(char *ans, int i, int j)
 	return (ans);
 }
 
-void	*sum_char(char *ans, char *tmp, t_struct *st)
+void	*sum_char(char *ans, char *tmp)
 {
 	int i;
 	int j;

@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void	flags(char *format, t_struct *st, va_list ap)
+void	flags(char *format, t_struct *st)
 {
 	while (format[st->i] >= 32 && format[st->i] <= 48 && format[st->i] != 37)
 	{
@@ -68,12 +68,6 @@ void	detect_wdth1(t_struct *st, char *format)
 
 void	detect_wdth(char *format, t_struct *st, va_list ap)
 {
-	int		i;
-	int		j;
-	char	*wdht;
-
-	i = st->i;
-	j = 0;
 	if (st->zvezd > 0)
 	{
 		st->wdht = va_arg(ap, int);
@@ -88,9 +82,8 @@ void	detect_wdth(char *format, t_struct *st, va_list ap)
 		detect_wdth1(st, format);
 }
 
-void 	memdel(t_struct *st)
+void	memdel(t_struct *st)
 {
 	ft_memdel((void **)(&st->color));
 	ft_memdel((void **)(&st));
-
 }

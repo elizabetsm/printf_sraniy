@@ -20,7 +20,7 @@ int		length(char *format, t_struct *st, va_list ap)
 		if (format[st->i] == 'd' || format[st->i] == 'i')
 		{
 			st->a = (char)va_arg(ap, int);
-			specif_di(st, st->a, format);
+			specif_di(st);
 		}
 		else if (format[st->i] == 'o' || format[st->i] == 'u' ||
 				format[st->i] == 'x' || format[st->i] == 'X')
@@ -46,7 +46,7 @@ int		short_length(char *format, t_struct *st, va_list ap)
 	if (format[st->i] == 'd' || format[st->i] == 'i')
 	{
 		st->a = (short int)va_arg(ap, int);
-		specif_di(st, st->a, format);
+		specif_di(st);
 	}
 	else if (format[st->i] == 'o' || format[st->i] == 'u' ||
 			format[st->i] == 'x' || format[st->i] == 'X')

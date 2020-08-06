@@ -90,8 +90,8 @@ char	*u_itoa(unsigned long long n)
 
 	len = u_ft_length(n);
 	tmp = n;
-	if (n == (-9223372036854775807 - 1))
-		return (ft_strdup("-9223372036854775808"));
+	if (n == 9223372036854775808u)
+		return (ft_strdup("9223372036854775808u"));
 	if (!(a = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	if (n == 0)

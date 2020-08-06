@@ -83,11 +83,11 @@ int main()
 //	n = ft_printf(str, &c);
 //	j =    printf(str, &c);
 //
-//
-//	double c = 0.999999500000000000;
-//	char *str = "% #20.3f\n";//leak
-//	n = ft_printf(str, c);
-//	j =    printf(str, c);
+
+	unsigned long c = -9223372036854775808;
+	char *str = "% #u\n";//leak
+	n = ft_printf(str, c);
+	j =    printf(str, c);
 
 	if ( n == j)
 		printf("равны\n");

@@ -12,31 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void	ft_printf_sec(char *format, t_struct *st, va_list ap)
-{
-	if (format[st->i] == 'd' || format[st->i] == 'i')
-	{
-		st->a = va_arg(ap, int);
-		st->specif = 'd';
-		specif_di(st, st->a, format);
-	}
-	else if (format[st->i] == 'o' || format[st->i] == 'u' ||
-			format[st->i] == 'x' || format[st->i] == 'X')
-	{
-		st->u = va_arg(ap, unsigned int);
-		specif_uoxx(st, format, st->u);
-		st->f_plus = 0;
-	}
-	else if (format[st->i] == 'p')
-	{
-		st->d = va_arg(ap, long long int);
-		hexadecimal(st->d, 0, st);
-		st->specif = 'p';
-		st->i++;
-	}
-}
-
-void 	ft_print_cs1(t_struct *st, va_list ap)
+void	ft_print_cs1(t_struct *st, va_list ap)
 {
 	st->c = va_arg(ap, int);
 	st->specif = 'c';
@@ -81,7 +57,7 @@ void	specifier(char *format, t_struct *st, va_list ap)
 		st->tmp[1] = '\0';
 		st->f_space = 0;
 		if (format[st->i] != '\0')
-			ft_print(format, st);
+			ft_print(st);
 		else
 			st->i--;
 		st->i++;
@@ -95,7 +71,7 @@ void	specifier(char *format, t_struct *st, va_list ap)
 		ft_printf_fl(format, st, ap);
 	else
 		ft_printf_sec(format, st, ap);
-	ft_print(format, st);
+	ft_print(st);
 }
 
 void	handle(char *format, va_list ap, t_struct *st)
@@ -104,7 +80,7 @@ void	handle(char *format, va_list ap, t_struct *st)
 
 	init(st);
 	st->i++;
-	flags(format, st, ap);
+	flags(format, st);
 	width(format, st, ap);
 	i = length(format, st, ap);
 	if (format[st->i] == 'L')
@@ -112,7 +88,7 @@ void	handle(char *format, va_list ap, t_struct *st)
 	if (i == 0)
 		specifier(format, st, ap);
 	else
-		ft_print(format, st);
+		ft_print(st);
 }
 
 int		ft_printf(char *format, ...)
