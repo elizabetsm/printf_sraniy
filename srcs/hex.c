@@ -37,9 +37,9 @@ int		hexadecimal2(unsigned long long int a, int trig, t_struct *st)
 		}
 		else
 			hexadecimal3(i, st);
-		st->tmp = ft_strjoin(st->str, st->l);
-		ft_memdel((void **)(&st->str));
-		st->str = st->tmp;
+		st->str = ft_strjoin(st->tmp, st->l);
+		ft_memdel((void **)(&st->tmp));
+		st->tmp = st->str;
 		a = a / 16;
 		f++;
 	}
@@ -62,10 +62,10 @@ void	hexadecimal(unsigned long long int a, int trig, t_struct *st)
 	st->l = ft_memalloc(20);
 	f = hexadecimal2(a, trig, st);
 	ft_memdel((void **)(&st->l));
-	ft_memdel((void **)(&st->tmp));
 	st->tmp = ft_memalloc(400);
 	a = 0;
 	while (--f >= 0)
 		st->tmp[a++] = st->str[f];
 	st->tmp[a] = '\0';
+	ft_memdel((void **)(&st->str));
 }

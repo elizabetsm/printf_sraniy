@@ -80,6 +80,7 @@ void	init(t_struct *st)
 	st->num_flags = 0;
 	st->without_0x = 0;
 	st->f_trig = 0;
+	st->f_color = 0;
 }
 
 char	*u_itoa(unsigned long long n)

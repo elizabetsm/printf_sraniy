@@ -49,6 +49,7 @@ typedef struct				s_struct{
 	int						f_long;
 	int						f_trig;
 	int						f_scp;
+	int						f_color;
 	int						without_0x;
 	int						wdht;
 	int						schet;
@@ -58,7 +59,6 @@ typedef struct				s_struct{
 	int						num_flags;
 	int						wdth_pres;
 	int						zvezd;
-
 	long double				fl;
 	int						size;
 	int						shift;
@@ -119,6 +119,8 @@ void						print_else1(t_struct *st);
 int							short_length(char *format, t_struct *st,
 							va_list ap);
 int							long_length(char *format, t_struct *st, va_list ap);
+void						long_length1(char *format, t_struct *st,
+							va_list ap);
 int							hexadecimal2(unsigned long long int a, int trig,
 							t_struct *st);
 void						detect_wdth(char *format, t_struct *st, va_list ap);

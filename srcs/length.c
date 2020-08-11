@@ -27,8 +27,8 @@ int		length(char *format, t_struct *st, va_list ap)
 		{
 			st->a = (unsigned char)va_arg(ap, int);
 			specif_uoxx(st, format, st->a);
+			st->f_plus = 0;
 		}
-		st->f_plus = 0;
 	}
 	else if (format[st->i] == 'h')
 		return (short_length(format, st, ap));
@@ -53,11 +53,18 @@ int		short_length(char *format, t_struct *st, va_list ap)
 	{
 		st->a = (unsigned short int)va_arg(ap, int);
 		specif_uoxx(st, format, st->a);
+		st->f_plus = 0;
 	}
 	else
 		st->f_space = 0;
-	st->f_plus = 0;
 	return (1);
+}
+
+void	long_length1(char *format, t_struct *st, va_list ap)
+{
+	st->o = va_arg(ap, unsigned long long int);
+	specif_uoxx(st, format, st->o);
+	st->f_plus = 0;
 }
 
 int		long_length(char *format, t_struct *st, va_list ap)
@@ -80,10 +87,7 @@ int		long_length(char *format, t_struct *st, va_list ap)
 	}
 	else if (format[st->i] == 'o' || format[st->i] == 'u' ||
 			format[st->i] == 'x' || format[st->i] == 'X')
-	{
-		st->o = va_arg(ap, unsigned long long int);
-		specif_uoxx(st, format, st->o);
-	}
+		long_length1(format, st, ap);
 	else
 		return (0);
 	return (1);

@@ -44,8 +44,7 @@ void	color_print(t_struct *st)
 		re_putstr("\033[0m");
 	else
 	{
-		st->i = 0;
-		free(st->color);
-		ft_strcpy(st->color, "no");
+		st->i = st->i - ft_strlen(st->color) - 2;
+		st->f_color = 1;
 	}
 }

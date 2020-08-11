@@ -110,8 +110,6 @@ void	null_print(t_struct *st)
 	i = ft_strlen(st->tmp);
 	if (st->f_scp == 1 && st->wdth_pres == 0 && st->f_pres == 1)
 		i = 0;
-	if (st->f_space == 1 && st->num_flags != 1 && st->wdht == 0)
-		st->schet = st->schet + re_putchar(' ');
 	else
 		null_print1(st, i);
 }

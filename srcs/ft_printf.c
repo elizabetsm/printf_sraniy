@@ -105,7 +105,7 @@ int		ft_printf(char *format, ...)
 	{
 		if (format[st->i] == '%')
 			handle(format, ap, st);
-		else if (format[st->i] == '{' && ft_strcmp(st->color, "no") != 0)
+		else if (format[st->i] == '{' && st->f_color == 0)
 			proverka(format, st);
 		else
 		{

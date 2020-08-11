@@ -1,4 +1,4 @@
 
-gcc main.c libftprintf.a
-valgrind ./a.out
+gcc main.c libftprintf.a -g
+valgrind --track-origins=yes ./a.out
 ./a.out
